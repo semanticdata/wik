@@ -1,0 +1,36 @@
+body,
+textarea {
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 20px;
+}
+
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+.title-bar {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+#title {
+  color: #ffa500;
+}
+
+.button {
+  float: right;
+  text-decoration: none;
+  background-color: #555;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  margin-left: 5px;
+}
