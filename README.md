@@ -2,13 +2,13 @@
 
 *A ridiculously simple personal wiki.*
 
-Implemented in a single 160-line HTML file.
+Originally implemented in a single 160-line HTML file, now broken into multiple files to make it easier to learn and maintain.
 
-Try it now: <a href="http://wik.netlify.com">wik.netlify.com</a>
+Try it now: <a href="https://semanticdata.github.io/wik/">semanticdata.github.io/wik</a>
 
-Bookmark it - it will keep working when you're offline.
+> Bookmark it - it will keep working when you're offline.
 
-Aims:
+## Goals
 
 * Be really, really simple.
 * Save all data in browser localstorage
@@ -19,5 +19,12 @@ Aims:
 * Decent keyboard navigation.
 * Work offline.
 
+## Changes from Upstream
 
+* Break up into individual HTML, CSS, and JS files
+* Deploy new [demo site]([https://](https://semanticdata.github.io/wik/))
+* Add MIT License
 
+## © License
+
+Source code in this repository is available under the [MIT License](LICENSE).
