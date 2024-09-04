@@ -91,6 +91,8 @@ footer .heart {
   background-color: #555;
   color: #fff;
   border-radius: 50%;
+  width: 1.5rem;
+  font-size: 15px;
 }
 
 .info-button:hover {
