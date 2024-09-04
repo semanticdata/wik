@@ -21,7 +21,6 @@ textarea {
   font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   font-size: 18px;
-  border: none;
   overflow: auto;
   outline: none;
   -webkit-box-shadow: none;
@@ -29,8 +28,8 @@ textarea {
   box-shadow: none;
   border: 1px dashed #c0c0c0;
   padding: 1rem;
-  /* width: 100%; */
-  width: calc(100% - 3rem);
+  width: calc(100% - 2rem);
+  height: calc(100% - 3rem);
 }
 
 footer .heart {
@@ -44,7 +43,6 @@ footer .heart {
 }
 
 #title {
-  color: #404040;
   color: #eeeeee;
   font-weight: 600;
   background: #404040;
