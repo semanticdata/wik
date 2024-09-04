@@ -1,30 +1,40 @@
-body,
-textarea {
+body {
+  background: #fefefe;
+  display: flex;
+  flex-direction: column;
   font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  font-size: 20px;
 }
 
 textarea {
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 18px;
   border: none;
   overflow: auto;
   outline: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  width: 100%;
+  border: 1px dashed #c0c0c0;
+  padding: 1rem;
 }
 
 .title-bar {
-  margin-bottom: 20px;
-  font-size: 30px;
+  margin-bottom: 1rem;
+  font-size: 28px;
 }
 
 #title {
-  color: #ffa500;
+  color: #404040;
+  color: #eeeeee;
+  font-weight: 600;
+  background: #404040;
+  padding-inline: 0.5rem;
 }
 
 .button {
+  font-weight: 600;
   float: right;
   text-decoration: none;
   background-color: #555;
@@ -32,5 +42,5 @@ textarea {
   width: 35px;
   height: 35px;
   text-align: center;
-  margin-left: 5px;
+  margin-inline-start: 5px;
 }

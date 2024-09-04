@@ -6,7 +6,8 @@
     /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/gi;
 
   var INITIAL_CONTENT = {
-    Home: "Edit me! Just type away on this page.\n\nCreate links like this: (Banana) or (https://github.com/martinpllu/wik)\n\nClick or press return inside links to navigate.\n\nClick # to edit/grab/search all content.",
+    Home: "Edit me! Just type away on this page.\n\nCreate links by wrapping the text like in square brackets like:\n\n- [Banana] is an internal page.\n- [https://github.com/semanticdata/wik] is an external page.\n\nClick or press enter inside links to navigate.\n\nClick 'H' to come back 'Home'.\n\nFinally, you can click '#' to edit/grab/search all content/pages.",
+    Banana: "This is the content of the Banana page. Go back [Home].",
   };
 
   var currentPage, allPages;
@@ -59,10 +60,12 @@
     var linkStart, linkEnd;
     for (var i = 0; i < text.length; i++) {
       var c = text.charAt(i);
-      if (c == "[" || c == "(") {
+      // if (c == "[" || c == "(") {
+      if (c == "[") {
         linkStart = i;
       }
-      if (c == "]" || c == ")") {
+      // if (c == "]" || c == ")") {
+      if (c == "]") {
         if (linkStart != null) {
           linkEnd = i;
         }
