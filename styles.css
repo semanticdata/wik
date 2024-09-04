@@ -73,6 +73,7 @@ footer .heart {
   border: 1px solid #ccc;
   background: white;
   z-index: 1000;
+  font-size: 18px;
 }
 
 .overlay {
