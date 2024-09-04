@@ -12,13 +12,41 @@
   </head>
 
   <body>
-    <div class="title-bar">
+    <header class="title-bar">
       <a id="back" class="button" href="javascript:history.back()">&lt;</a>
       <a id="settings" class="button" href="#AllContent">#</a>
       <a id="home" class="button" href="#Home">H</a>
       <span id="title"></span>
-    </div>
-    <textarea id="editor" rows="20" spellcheck="false"> </textarea>
+    </header>
+
+    <main>
+      <textarea id="editor" rows="20" spellcheck="false"></textarea>
+    </main>
+
+    <footer>
+      <div class="overlay" id="overlay"></div>
+      <div class="dialog" id="dialog">
+        <p>
+          Made with
+          <a
+            class="heart"
+            href="https://github.com/semanticdata/firefox-new-tab-notes"
+            >❤</a
+          >
+          by <a href="https://github.com/semanticdata">Miguel Pimentel</a>.
+        </p>
+        <button
+          onclick="closeDialog()"
+          style="
+            font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+              DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+          "
+        >
+          Close
+        </button>
+      </div>
+      <button class="info-button" onclick="openDialog()">&#105;</button>
+    </footer>
   </body>
 
   <script src="./script.js"></script>
