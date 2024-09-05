@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Disable zoom-on-edit in certain mobile browsers -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
-    <meta
-      name="viewport"
-      content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0"
-    />
-    <title>wik</title>
-    <meta name="description" content="Wik is a simple personal wiki." />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
 
-  <body>
-    <header class="title-bar">
-      <a id="back" class="button" href="javascript:history.back()">&lt;</a>
-      <a id="settings" class="button" href="#AllContent">#</a>
-      <a id="home" class="button" href="#Home">H</a>
-      <span id="title"></span>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <!-- Disable zoom-on-edit in certain mobile browsers -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0" />
+  <title>wik</title>
+  <meta name="description" content="Wik is a simple personal wiki." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
 
-    <main>
-      <!-- <textarea id="editor" rows="20" spellcheck="false"></textarea> -->
-      <textarea id="editor" spellcheck="false"></textarea>
-    </main>
+<body>
+  <header class="title-bar">
+    <a id="back" class="button" href="javascript:history.back()">&lt;</a>
+    <a id="settings" class="button" href="#AllContent">#</a>
+    <a id="home" class="button" href="#Home">H</a>
+    <span id="title"></span>
+  </header>
 
-    <footer>
-      <div class="overlay" id="overlay"></div>
-      <div class="dialog" id="dialog">
-        <p>
-          Made with
-          <a
-            class="heart"
-            href="https://github.com/semanticdata/firefox-new-tab-notes"
-            >❤</a
-          >
-          by <a href="https://github.com/semanticdata">Miguel Pimentel</a>.
-        </p>
-        <button
-          onclick="closeDialog()"
-          style="
+  <main>
+    <!-- <textarea id="editor" rows="20" spellcheck="false"></textarea> -->
+    <textarea id="editor" spellcheck="false"></textarea>
+  </main>
+
+  <footer>
+    <div class="overlay" id="overlay"></div>
+    <div class="dialog" id="dialog">
+      <h2 style="margin-top:0;">Usage</h2>
+      <p>Edit the pages directly! Just type away on them.</p>
+      <p>Create links by wrapping the text like in square brackets like:</p>
+      <ul>
+        <li>[Banana]</li>
+        <li>[https://github.com/semanticdata/wik]</li>
+      </ul>
+      <p>Click or press <kbd>Enter</kbd> inside links to navigate. </p>
+      <p>Click <span style="background:#555;color:white;padding-inline:0.5rem;">H</span> to go back
+        <strong>Home</strong>.
+      </p>
+      <p>
+        Click <span style="background:#555;color:white;padding-inline:0.5rem;">#</span> to edit/grab/search all
+        content/pages.
+      </p>
+      <hr />
+      <p>
+        Maintained with
+        <a class="heart" href="https://github.com/semanticdata/firefox-new-tab-notes">❤</a>
+        by <a href="https://github.com/semanticdata">Miguel Pimentel</a>.
+      </p>
+      <button class="button" style="float:none;width:unset;" onclick="closeDialog()" style="
             font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
               DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-          "
-        >
-          Close
-        </button>
-      </div>
-      <button class="info-button" onclick="openDialog()">&#105;</button>
-    </footer>
-  </body>
+          ">
+        Close
+      </button>
+    </div>
+    <button class="info-button" onclick="openDialog()">&#105;</button>
+  </footer>
+</body>
 
-  <script src="./script.js"></script>
+<script src="./script.js"></script>
+
 </html>
