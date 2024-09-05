@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Cards</title>
+  <style>
+    /* CSS for card layout */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 1rem;
+      width: 250px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .card a {
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">Page Cards</h1>
+
+  <div id="card-container" class="card-container"></div>
+
+  <textarea id="editor" style="display:none;"></textarea>
+
+  <script>
+    // Original JavaScript Code (Shortened for brevity)
+    (function () {
+      var DATA_KEY = "wik.data";
+      var INITIAL_CONTENT = {
+        Home: "Edit me! Just type away on this page...",
+        Banana: "This is the content of the Banana page. Go back [Home].",
+      };
+      var currentPage, allPages;
+      var editor = document.getElementById("editor");
+
+      document.addEventListener("DOMContentLoaded", function (event) {
+        load();
+        enterPage("Home");
+        renderCards(); // Call function to render cards after page loads
+      });
+
+      function load() {
+        var rawData = localStorage.getItem(DATA_KEY);
+        if (!rawData) {
+          allPages = INITIAL_CONTENT;
+        } else {
+          allPages = JSON.parse(rawData);
+        }
+      }
+
+      function enterPage(pageName) {
+        currentPage = pageName;
+        window.location.hash = pageName;
+        editor.value = pageContent();
+        document.getElementById("title").innerHTML = currentPage;
+        editor.blur();
+      }
+
+      function pageContent() {
+        return allPages[currentPage] || "";
+      }
+
+      function renderCards() {
+        var container = document.getElementById("card-container");
+        container.innerHTML = ""; // Clear the container before rendering new content
+
+        for (var page in allPages) {
+          if (allPages.hasOwnProperty(page)) {
+            // Create card element
+            var card = document.createElement("div");
+            card.className = "card";
+
+            // Create title element
+            var title = document.createElement("div");
+            title.className = "card-title";
+            title.textContent = page;
+            
+            // Create content element
+            var content = document.createElement("div");
+            content.className = "card-content";
+            content.textContent = allPages[page].substring(0, 100) + "..."; // Show a preview of the content
+
+            // Create link to navigate to the page
+            var link = document.createElement("a");
+            link.href = "#" + page;
+            link.textContent = "View Page";
+            link.onclick = function () {
+              enterPage(page); // Set to navigate to the page on click
+            };
+
+            // Append elements to the card
+            card.appendChild(title);
+            card.appendChild(content);
+            card.appendChild(link);
+
+            // Append card to container
+            container.appendChild(card);
+          }
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
