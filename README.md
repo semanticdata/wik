@@ -1,8 +1,10 @@
+> This fork is undergoing active development. Expect big breaking changes.
+
 # wik
 
 _A ridiculously simple personal wiki._
 
-Originally implemented in a single 160-line HTML file, now broken into multiple files to make it easier to learn and maintain.
+Originally implemented in a single 160-line HTML file; now broken into multiple files to make it easier to learn and maintain.
 
 Try it now: [semanticdata.github.io/wik](https://semanticdata.github.io/wik/)
 
@@ -21,9 +23,13 @@ Try it now: [semanticdata.github.io/wik](https://semanticdata.github.io/wik/)
 
 ## Changes from Upstream
 
-- Break up into individual HTML, CSS, and JS files
-- Deploy new [demo site](<[https://](https://semanticdata.github.io/wik/)>)
-- Add MIT License
+- Separate into individual HTML, CSS, and JS files.
+- Deploy new [demo site](https://semanticdata.github.io/wik/)
+- Change links from being defined between parenthesis "(link)" to brackets "[link]".
+- Create 'Banana' page initially with minimal content.
+- New 'Home' button.
+- New 'Info' button with a new 'Usage' section.
+- Add MIT License to repository.
 
 ## © License
 
