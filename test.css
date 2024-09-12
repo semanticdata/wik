@@ -1,0 +1,131 @@
+html {
+  height: 100vh;
+}
+
+body {
+  background: #fefefe;
+  display: flex;
+  flex-direction: column;
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  height: calc(100vh - 2rem);
+  margin: 0;
+  padding: 1rem;
+}
+
+main {
+  flex: 1;
+}
+
+textarea {
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 18px;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px dashed #c0c0c0;
+  padding: 1rem;
+  width: calc(100% - 2rem);
+  height: calc(100% - 3rem);
+}
+
+footer .heart {
+  text-decoration: none;
+  color: red;
+}
+
+.title-bar {
+  margin-block-end: 1rem;
+  font-size: 28px;
+}
+
+#title {
+  color: #eeeeee;
+  font-weight: 600;
+  background: #404040;
+  padding-inline: 0.5rem;
+}
+
+.button {
+  font-weight: 600;
+  float: right;
+  text-decoration: none;
+  background-color: #555;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  margin-inline-start: 5px;
+}
+
+.dialog {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: white;
+  z-index: 1000;
+  font-size: 18px;
+  max-width: calc(100% - 6rem);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.info-button {
+  background-color: #555;
+  color: #fff;
+  border-radius: 50%;
+  width: 1.5rem;
+  font-size: 15px;
+}
+
+.info-button:hover {
+  cursor: pointer;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 250px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-content {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.card a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
