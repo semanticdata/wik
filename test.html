@@ -4,19 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>wik</title>
+  <title>Wik | Test Page</title>
   <meta name="description" content="Wik is a simple personal wiki." />
-  <script type="module" src="script.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <script type="module" src="script.js"></script>
+  <script type="module" src="dialog.js"></script>
   <link rel="stylesheet" href="test.css" />
 </head>
 
 <body>
+
   <header>
     <span id="title"></span>
     <nav>
-      <a id="home-link" class="button" href="#Home">H</a>
+      <a href="javascript:void(0);" class="button" onclick="openDialog()">?</a>
       <a id="allcontent-link" class="button" href="#AllContent">#</a>
       <a id="back-link" class="button" href="javascript:history.back()">&lt;</a>
+      <a id="home-link" class="button" href="#Home">H</a>
     </nav>
   </header>
 
@@ -27,6 +31,38 @@
   <footer>
     <p>Placeholder footer content.</p>
   </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="dialog" id="dialog">
+    <h2 style="margin-top:0;">Usage</h2>
+    <p>Edit the pages directly! Just type away on them.</p>
+    <p>Create links by wrapping the text like in square brackets like:</p>
+    <ul>
+      <li>[Banana]</li>
+      <li>[https://github.com/semanticdata/wik]</li>
+    </ul>
+    <p>Click or press <kbd>Enter</kbd> inside links to navigate. </p>
+    <p>Click <span style="background:#555;color:white;padding-inline:0.5rem;">H</span> to go back
+      <strong>Home</strong>.
+    </p>
+    <p>
+      Click <span style="background:#555;color:white;padding-inline:0.5rem;">#</span> to edit/grab/search all
+      content/pages.
+    </p>
+    <hr />
+    <p>
+      Maintained with
+      <a class="heart" href="https://github.com/semanticdata/firefox-new-tab-notes">❤</a>
+      by <a href="https://github.com/semanticdata">Miguel Pimentel</a>.
+    </p>
+    <button class="button" style="float:none;width:unset;" onclick="closeDialog()" style="
+            font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+              DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+          ">
+      Close
+    </button>
+  </div>
+
 </body>
 
 </html>
