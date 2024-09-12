@@ -32,20 +32,17 @@ textarea {
   height: calc(100% - 3rem);
 }
 
-footer .heart {
-  text-decoration: none;
-  color: red;
-}
-
-.title-bar {
+header {
+  display: flex;
+  justify-content: space-between;
   margin-block-end: 1rem;
   font-size: 28px;
 }
 
 #title {
+  background: #404040;
   color: #eeeeee;
   font-weight: 600;
-  background: #404040;
   padding-inline: 0.5rem;
 }
 
@@ -59,43 +56,6 @@ footer .heart {
   height: 35px;
   text-align: center;
   margin-inline-start: 5px;
-}
-
-.dialog {
-  display: none;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  border: 1px solid #ccc;
-  background: white;
-  z-index: 1000;
-  font-size: 18px;
-  max-width: calc(100% - 6rem);
-}
-
-.overlay {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
-
-.info-button {
-  background-color: #555;
-  color: #fff;
-  border-radius: 50%;
-  width: 1.5rem;
-  font-size: 15px;
-}
-
-.info-button:hover {
-  cursor: pointer;
 }
 
 .card-container {
