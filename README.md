@@ -1,5 +1,3 @@
-> This fork is undergoing active development. Expect big breaking changes.
-
 # wik
 
 _A ridiculously simple personal wiki._
@@ -9,6 +7,8 @@ Originally implemented in a single 160-line HTML file; now broken into multiple 
 Try it now: [semanticdata.github.io/wik](https://semanticdata.github.io/wik/)
 
 > Bookmark it - it will keep working when you're offline.
+
+![screenshot](/screenshot.png)
 
 ## Goals
 
